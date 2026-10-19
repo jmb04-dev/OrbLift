@@ -1,0 +1,102 @@
+{
+  "runtime": "v24.19.0",
+  "platform": "win32",
+  "backend": "Skia Canvas + simulated DOM",
+  "scenarios": [
+    {
+      "name": "normal",
+      "frames": 180,
+      "meanMs": 19.76915277777778,
+      "p95Ms": 62.61550000000034,
+      "maxMs": 128.45049999999992,
+      "metrics": {
+        "lookups": 11340,
+        "textWrites": 4500,
+        "styleWrites": 6300,
+        "attributeWrites": 540,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": 267704,
+      "rssDeltaBytes": 219066368,
+      "objects": 6,
+      "sparks": 0
+    },
+    {
+      "name": "magnet",
+      "frames": 180,
+      "meanMs": 39.03871666666675,
+      "p95Ms": 83.57510000000002,
+      "maxMs": 158.89730000000054,
+      "metrics": {
+        "lookups": 11710,
+        "textWrites": 4870,
+        "styleWrites": 6300,
+        "attributeWrites": 540,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": 75320,
+      "rssDeltaBytes": 327495680,
+      "objects": 6,
+      "sparks": 0
+    },
+    {
+      "name": "offscreen",
+      "frames": 180,
+      "meanMs": 82.45086222222221,
+      "p95Ms": 228.87479999999778,
+      "maxMs": 696.8981999999996,
+      "metrics": {
+        "lookups": 11345,
+        "textWrites": 4505,
+        "styleWrites": 6300,
+        "attributeWrites": 540,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": 87256,
+      "rssDeltaBytes": 230309888,
+      "objects": 75,
+      "sparks": 9
+    },
+    {
+      "name": "paused",
+      "frames": 180,
+      "meanMs": 5.196083333333323,
+      "p95Ms": 6.148199999999633,
+      "maxMs": 7.097799999999552,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 0,
+        "styleWrites": 0,
+        "attributeWrites": 0,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": -2344,
+      "rssDeltaBytes": 176754688,
+      "objects": 0,
+      "sparks": 0
+    },
+    {
+      "name": "hidden",
+      "frames": 180,
+      "meanMs": 6.812053333333238,
+      "p95Ms": 8.404999999998836,
+      "maxMs": 9.634299999997893,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 0,
+        "styleWrites": 0,
+        "attributeWrites": 0,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": -1112,
+      "rssDeltaBytes": 180535296,
+      "objects": 0,
+      "sparks": 0
+    }
+  ]
+}

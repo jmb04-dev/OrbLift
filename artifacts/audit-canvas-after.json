@@ -1,0 +1,102 @@
+{
+  "runtime": "v24.19.0",
+  "platform": "win32",
+  "backend": "Skia Canvas + simulated DOM",
+  "scenarios": [
+    {
+      "name": "normal",
+      "frames": 180,
+      "meanMs": 7.036245555555554,
+      "p95Ms": 12.624199999999973,
+      "maxMs": 17.803900000000112,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 57,
+        "styleWrites": 180,
+        "attributeWrites": 6,
+        "storageWrites": 0,
+        "canvases": 2
+      },
+      "heapDeltaBytes": 334360,
+      "rssDeltaBytes": 3346432,
+      "objects": 6,
+      "sparks": 0
+    },
+    {
+      "name": "magnet",
+      "frames": 180,
+      "meanMs": 18.17329833333333,
+      "p95Ms": 23.17159999999967,
+      "maxMs": 30.398999999999887,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 73,
+        "styleWrites": 180,
+        "attributeWrites": 6,
+        "storageWrites": 0,
+        "canvases": 2
+      },
+      "heapDeltaBytes": 15264,
+      "rssDeltaBytes": 2408448,
+      "objects": 6,
+      "sparks": 0
+    },
+    {
+      "name": "offscreen",
+      "frames": 180,
+      "meanMs": 6.256739999999976,
+      "p95Ms": 7.79149999999936,
+      "maxMs": 8.941399999999703,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 62,
+        "styleWrites": 180,
+        "attributeWrites": 6,
+        "storageWrites": 0,
+        "canvases": 2
+      },
+      "heapDeltaBytes": 86520,
+      "rssDeltaBytes": 2023424,
+      "objects": 75,
+      "sparks": 9
+    },
+    {
+      "name": "paused",
+      "frames": 180,
+      "meanMs": 0.004431111111150838,
+      "p95Ms": 0.005799999999908323,
+      "maxMs": 0.06559999999990396,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 0,
+        "styleWrites": 0,
+        "attributeWrites": 0,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": -59248,
+      "rssDeltaBytes": 86016,
+      "objects": 0,
+      "sparks": 0
+    },
+    {
+      "name": "hidden",
+      "frames": 180,
+      "meanMs": 0.003099444444407911,
+      "p95Ms": 0.0039999999999054126,
+      "maxMs": 0.05279999999947904,
+      "metrics": {
+        "lookups": 0,
+        "textWrites": 0,
+        "styleWrites": 0,
+        "attributeWrites": 0,
+        "storageWrites": 0,
+        "canvases": 0
+      },
+      "heapDeltaBytes": -1240,
+      "rssDeltaBytes": -172032,
+      "objects": 0,
+      "sparks": 0
+    }
+  ]
+}

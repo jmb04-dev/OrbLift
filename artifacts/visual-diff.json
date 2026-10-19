@@ -1,0 +1,7 @@
+{
+  "comparison": "Pickup artwork before/after cache optimization",
+  "meanChannelDifference": 0.13991964285714287,
+  "maximumChannelDifference": 36,
+  "changedChannels": 19994,
+  "totalChannels": 224000
+}

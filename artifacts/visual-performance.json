@@ -1,0 +1,62 @@
+[
+  {
+    "theme": "void",
+    "coldMs": 51.71,
+    "warmFrameMs": 0.54
+  },
+  {
+    "theme": "stars",
+    "coldMs": 35.16,
+    "warmFrameMs": 0.81
+  },
+  {
+    "theme": "grid",
+    "coldMs": 29.27,
+    "warmFrameMs": 0.56
+  },
+  {
+    "theme": "embers",
+    "coldMs": 29.61,
+    "warmFrameMs": 0.75
+  },
+  {
+    "theme": "ocean",
+    "coldMs": 33.34,
+    "warmFrameMs": 0.74
+  },
+  {
+    "theme": "aurora",
+    "coldMs": 30.99,
+    "warmFrameMs": 1.14
+  },
+  {
+    "theme": "nebula",
+    "coldMs": 33.07,
+    "warmFrameMs": 1.27
+  },
+  {
+    "theme": "matrix",
+    "coldMs": 28.57,
+    "warmFrameMs": 0.44
+  },
+  {
+    "theme": "galaxy",
+    "coldMs": 31.05,
+    "warmFrameMs": 1.49
+  },
+  {
+    "theme": "eclipse",
+    "coldMs": 35.31,
+    "warmFrameMs": 0.6
+  },
+  {
+    "theme": "warp",
+    "coldMs": 35.86,
+    "warmFrameMs": 0.59
+  },
+  {
+    "theme": "cosmic",
+    "coldMs": 94.72,
+    "warmFrameMs": 0.6
+  }
+]

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#080918" />
+    <meta name="apple-mobile-web-app-title" content="OrbLift" />
+    <meta name="application-name" content="OrbLift" />
+    <title>OrbLift — Rise Beyond the Stars</title>
+    <link rel="stylesheet" href="styles/game.css" />
+  </head>
+  <body>
+    <canvas id="game"> </canvas>
+    <div class="hud">
+      <div class="coin-hud">
+        <span class="small"
+          >THIS RUN
+          <span id="coinRate" style="color: #dba0ff; font-weight: 900">1×</span>
+        </span>
+        <strong class="run-coin gold">● <span id="runCoins">+0</span> </strong>
+        <span class="small" style="margin-top: 7px">TOTAL COINS</span>
+        <span class="bank-coin gold">● <span id="bank">0</span> </span>
+      </div>
+      <div class="distance">
+        <span class="small">DISTANCE</span>
+        <strong id="distance">0</strong>
+        <span class="small">METERS</span>
+      </div>
+      <div class="right">
+        <div style="text-align: right">
+          <span class="small">BEST</span>
+          <span class="stat" id="best">0 m</span>
+        </div>
+        <button class="pause" id="pause" style="display: none">Ⅱ</button>
+      </div>
+    </div>
+    <div class="multiplier-banner" id="multiplierBanner" style="display: none">
+      <div id="multiplierValue">2×</div>
+      <small id="multiplierTimer">10s LEFT</small>
+    </div>
+    <div class="shield" id="shield"></div>
+    <div class="zone-hud" id="zoneHUD" style="display: none">
+      <span id="zoneName">The Ascent</span>
+      <div
+        class="zone-progress"
+        id="zoneProgress"
+        role="progressbar"
+        aria-label="Progress to next cosmic zone"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <div id="zoneProgressFill"></div>
+      </div>
+      <small id="zoneNext">1,000 m</small>
+    </div>
+    <div
+      class="zone-announcement"
+      id="zoneAnnouncement"
+      style="display: none"
+      role="status"
+      aria-live="polite"
+    >
+      <small id="zoneAltitude"></small><strong id="zoneTitle"></strong
+      ><span id="zoneReward"></span>
+    </div>
+    <div class="cosmic-events" id="cosmicEvents" style="display: none">
+      <span id="rushBadge" style="display: none"></span
+      ><span id="showerBadge" style="display: none"></span>
+    </div>
+    <div class="magnet-hud" id="magnetHUD" style="display: none">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path
+          d="M5 3v9a7 7 0 0 0 14 0V3M5 7h4m6 0h4M9 3v9a3 3 0 0 0 6 0V3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+        />
+      </svg>
+      <span>MAGNET <strong id="magnetTimer">10s</strong></span>
+    </div>
+    <div
+      class="revive-countdown"
+      id="reviveCountdown"
+      style="display: none"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <span>GET READY</span>
+      <strong id="reviveCountdownValue">3</strong>
+      <small>Drag to position your orb</small>
+    </div>
+    <div class="panel" id="panel">
+      <div class="card" id="menuCard">
+        <div class="menu-nav" id="menuNav" style="display: none">
+          <button class="menu-back" id="menuBack">← BACK</button>
+          <span class="menu-wallet" id="menuWallet" aria-label="Coin wallet">● 0</span>
+        </div>
+        <div id="homeArea">
+        <div class="logo">ORBLIFT</div>
+        <p id="message">
+          Rise beyond the stars. Dodge cosmic barriers, collect coins, and climb
+          farther with every run.
+        </p>
+        <div id="rankBadge" class="rankpill" style="color: #a1a1aa">NOVICE</div>
+        <div class="info" id="summary">● 0 coins saved</div>
+        <div id="reviveArea" style="display: none">
+          <p id="reviveText"></p>
+          <button class="button" id="revive">CONTINUE RUN</button>
+        </div>
+        </div>
+        <div id="shopArea" style="display: none">
+          <h2 style="margin-bottom: 0">ORBLIFT SHOP</h2>
+          <p>
+            Unlock ball colors and backgrounds. Multipliers are collected during
+            runs only! Collect neon-blue magnets to draw in nearby coins.
+          </p>
+          <div class="shop-tabs" role="tablist" aria-label="Shop categories">
+            <button
+              id="shopSkinTab"
+              role="tab"
+              aria-controls="skinsPanel"
+              aria-selected="true"
+            >
+              Ball Skins
+            </button>
+            <button
+              id="shopBackgroundTab"
+              role="tab"
+              aria-controls="backgroundsPanel"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Backgrounds
+            </button>
+          </div>
+          <div id="skinsPanel" role="tabpanel" aria-labelledby="shopSkinTab">
+            <div class="shopgrid" id="shopGrid"></div>
+          </div>
+          <div
+            id="backgroundsPanel"
+            role="tabpanel"
+            aria-labelledby="shopBackgroundTab"
+            style="display: none"
+          >
+            <p style="font-size: 12px; margin: 4px 0">
+              Buy once, switch anytime. Backgrounds are cosmetic only.
+            </p>
+            <div class="shopgrid" id="backgroundGrid"></div>
+          </div>
+        </div>
+        <div id="statsArea" style="display: none">
+          <h2>CAREER STATS</h2>
+          <div id="statsRank"></div>
+          <div id="statsProgress" class="ranktrack">
+            <div id="statsFill" class="rankfill"></div>
+          </div>
+          <p id="statsNext" style="font-size: 12px"></p>
+          <div id="statsGrid" class="statgrid"></div>
+          <h3 style="color: #c7a7ff">GALACTIC RANK BADGES</h3>
+          <div id="rankGallery" class="rank-gallery"></div>
+        </div>
+        <div id="mainActions">
+          <button class="button" id="start">START RUN →</button>
+          <button class="button secondary" id="openShop">SHOP ✦</button>
+          <button class="button secondary" id="openStats">
+            STATS & RANKS ◈
+          </button>
+        </div>
+        <p class="footer" id="menuFooter">
+          Drag left and right to steer · Speed increases over time · Stack
+          purple 2× power-ups before the timer expires · Gold “2” coins count
+          double · Coins stay yours
+        </p>
+      </div>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/environment-art.js"></script>
+    <script src="js/formations.js"></script>
+    <script src="js/backgrounds.js"></script>
+    <script src="js/rendering.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/gameplay.js"></script>
+    <script src="js/zones.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/core.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

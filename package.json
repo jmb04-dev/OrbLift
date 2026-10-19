@@ -1,0 +1,14 @@
+{
+  "name": "orblift",
+  "version": "0.8.0",
+  "private": true,
+  "description": "Standalone mobile-first neon arcade game",
+  "scripts": {
+    "test": "node --test tests/game.test.cjs",
+    "check": "node tools/check.cjs",
+    "audit:stress": "node --expose-gc tools/stress-audit.cjs",
+    "audit:benchmark": "node --expose-gc tools/audit-benchmark.cjs",
+    "audit:browser": "node tools/browser-audit.cjs",
+    "start": "node tools/serve.cjs"
+  }
+}

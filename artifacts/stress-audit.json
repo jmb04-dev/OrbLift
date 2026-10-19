@@ -1,0 +1,128 @@
+{
+  "runtime": "v24.19.0",
+  "gcAvailable": true,
+  "simulation": "10 separately disposed 150,000m games; 3 revives and stacked 1024x power-ups each",
+  "samples": [
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 48,
+      "peakSparks": 464,
+      "earned": 7855535,
+      "wallMs": 506.2620999999999,
+      "heapUsed": 5105992,
+      "rss": 74608640
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 49,
+      "peakSparks": 504,
+      "earned": 7642698,
+      "wallMs": 497.36130000000026,
+      "heapUsed": 5119304,
+      "rss": 73990144
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 57,
+      "peakSparks": 613,
+      "earned": 7657081,
+      "wallMs": 493.88239999999996,
+      "heapUsed": 5123528,
+      "rss": 75558912
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 58,
+      "peakSparks": 573,
+      "earned": 7764684,
+      "wallMs": 508.19349999999986,
+      "heapUsed": 5124800,
+      "rss": 73826304
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 55,
+      "peakSparks": 624,
+      "earned": 7582393,
+      "wallMs": 485.7246,
+      "heapUsed": 5129896,
+      "rss": 92839936
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 60,
+      "peakSparks": 639,
+      "earned": 7575954,
+      "wallMs": 489.70390000000043,
+      "heapUsed": 5128072,
+      "rss": 89661440
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 59,
+      "peakSparks": 570,
+      "earned": 7563829,
+      "wallMs": 486.4209000000001,
+      "heapUsed": 5143160,
+      "rss": 93708288
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 46,
+      "peakSparks": 436,
+      "earned": 7675501,
+      "wallMs": 484.3158999999996,
+      "heapUsed": 5140688,
+      "rss": 93384704
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 50,
+      "peakSparks": 506,
+      "earned": 7360026,
+      "wallMs": 480.5509000000002,
+      "heapUsed": 5145800,
+      "rss": 91127808
+    },
+    {
+      "frames": 8690,
+      "distance": 150033,
+      "zones": 23,
+      "revives": 3,
+      "peakObjects": 52,
+      "peakSparks": 574,
+      "earned": 7499241,
+      "wallMs": 457.0592999999999,
+      "heapUsed": 5144368,
+      "rss": 90857472
+    }
+  ],
+  "retainedHeapChangeBytes": 38376
+}
